@@ -1,0 +1,295 @@
+$bg-color: black;
+$text-color: aliceblue;
+$fuente: 'Hind', sans-serif;
+@mixin card-style {
+    width: 400;
+    height: 300;
+    border: solid 1px black;   
+}
+@mixin style-compras-alquiler {
+    grid-column: 1/3;
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    animation-duration: 0.6s;
+    animation-name: slidein;
+    
+ }
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.grid-container{
+    font-family: $fuente;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.header{
+    background-color: $bg-color;
+    grid-column: 1/3;
+    color: $text-color;
+        a{
+        list-style: none;
+        text-decoration: none; 
+        color: $text-color;
+         }
+             h1{
+            padding-left: 20px;
+            padding-top: 10px;
+                }
+}
+.barra{
+    grid-column: 1/3;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%; 
+    ul{
+        &:hover{
+            transform: translateY(-5px) scale(1.1);
+        }  
+    }
+        a{
+            color: $text-color;
+            font-size: 20px;
+            list-style: none;
+            text-decoration: none;
+        } 
+}
+.navbar{
+    display: none;
+}
+.fondo{
+    grid-column: 1/3;
+    background-image:url("../fotos/fondo.jpg");
+    background-size: 100%;
+    width: 200%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+        h3{
+            background-color: aliceblue;
+            border-radius: 10px;
+            opacity: 0.8;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+
+        }
+}
+h2{
+    width: 200%;
+    text-align: center;
+    font-size: 30px;
+    font-family: $fuente;
+    font-weight: bold;
+
+}
+.ofertas{
+    grid-column: 1/3;
+
+    width: 200%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;    
+}
+.cards{
+    @include card-style();
+    p{
+        padding-left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+    img{
+        width: 300px;
+        height: 200px;
+
+    }     
+}
+.footer{
+    grid-column: 1/3;
+    margin-top: 80px;
+    height: 300px;
+    background-color: black;
+    color: $text-color;
+    h1,h4{
+        padding-left: 20px;
+        padding-top: 10px; 
+    }
+    h5{
+        font-size: 30px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    li{
+        list-style: none;
+
+    }
+    h4{
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    p{
+        text-align: center;
+    }
+}
+.redes{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    ul{
+         grid-column: 1/3;
+    width: 70%;
+    display: flex;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    opacity: 0.4;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    }
+}
+
+.iconos img:hover{
+    transform: translateY(-5px) scale(1.05);
+
+}
+.formulario{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+.formulario form{
+    width: 50%;
+}
+.ventas , .alquilar{
+    @include style-compras-alquiler();
+    
+}
+.card-ventas , .card-alquilar{
+    border: solid 1px black;
+    display: flex;
+    margin-top: 50px;
+    img{
+        width: 400px;
+        height: 300px;
+    }
+}
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+.description{
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    p{
+        font-size: 30px;
+        font-weight: bold;
+
+    }
+}
+.description-obra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    p{
+        font-size: 30px;
+        font-weight: bold;
+
+    }
+}
+.contacto{
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+.emprendimientos{
+    margin-top: 50px;
+    grid-column: 1/3;
+
+}
+.more{
+    display: flex;
+    justify-content: center;
+
+}
+.obra1{
+    grid-column: 1/3;
+    img{
+        width: 50%;
+        height: auto;
+        margin-left: 25%; 
+
+    }
+}
+.obra2{
+    grid-column: 1/3;
+    img{
+        width: 50%;
+        height: auto;
+        margin-left: 25%; 
+        margin-top: 50px;
+    }
+}
+@media (max-width: 700px){
+    .fondo{
+        background-size: auto;
+    }
+    .fondo h3{
+        width: 20ch;
+        text-align: center;   
+    }
+    .barra{
+        grid-column: 1/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards , .card-ventas , .card-alquilar{
+        grid-column: 1/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .barra{
+        display: none;
+    }
+    .navbar{
+        display:block;
+        background-color: black;
+    }
+    
+}
