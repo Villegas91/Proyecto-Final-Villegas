@@ -154,7 +154,7 @@ h2 {
     width: 500px;
     height: 300px; }
     .card-ventas .slide img, .card-alquilar .slide img {
-      width: 200%;
+      width: 100%;
       height: 300px; }
 
 @keyframes slidein {
@@ -232,6 +232,7 @@ h2 {
     align-items: center; }
   .cards {
     grid-column: 1/3;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -240,7 +241,7 @@ h2 {
       height: 400px; }
   .contacto {
     width: 100%; }
-  .card-ventas, .card-alquilar {
+  .card-ventas, .card-alquilar, .cards {
     grid-column: 1/3;
     display: flex;
     flex-direction: column;
