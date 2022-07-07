@@ -238,6 +238,8 @@ h2 {
     .cards img {
       width: 90%;
       height: 400px; }
+  .contacto {
+    width: 100%; }
   .card-ventas, .card-alquilar {
     grid-column: 1/3;
     display: flex;
